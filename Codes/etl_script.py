@@ -2,8 +2,13 @@ import pandas as pd
 import re
 import ast
 
-# Read the CSV file
-df = pd.read_csv("5k_borrowers_data.csv")
+# Try reading the CSV file with error handling
+try:
+    # Read the CSV file
+    df = pd.read_csv("5k_borrowers_data.csv")
+except FileNotFoundError:
+    print("Error: The file '5k_borrowers_data.csv' was not found. Please ensure the file exists in the current directory.")
+    exit()
 
 # Check for null values and basic info
 print(df.info())
@@ -46,6 +51,8 @@ def calculate_outstanding_balance(row):
 df_required['Outstanding Balance'] = df_required.apply(calculate_outstanding_balance, axis=1)
 
 # Save the final DataFrame to a new CSV file
-df_required.to_csv("borrowed_data.csv")
-
-print("Cleaned data has been saved to 'borrowed_data.csv'.")
+try:
+    df_required.to_csv("borrowed_data.csv", index=False)
+    print("Cleaned data has been saved to 'borrowed_data.csv'.")
+except Exception as e:
+    print(f"Error: Failed to save the file. {e}")
