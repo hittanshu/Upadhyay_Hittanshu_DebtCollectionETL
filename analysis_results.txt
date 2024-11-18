@@ -1,0 +1,39 @@
+Debt Collection ETL and Basic Analysis Results
+
+1. Average Loan Amount for Borrowers More Than 5 Days Past Due:
+   ₹54,683.16
+
+2. Top 10 Borrowers with Highest Outstanding Balance:
+   Name                Outstanding Balance
+   ----------------------------------------
+   Vaibhav Sharaf      ₹99,851
+   Veer Rau            ₹99,819
+   Neysa Vala          ₹99,761
+   Gokul Aggarwal      ₹99,750
+   Romil Wali          ₹99,741
+   Jiya Bassi          ₹99,721
+   Rasha Babu          ₹99,357
+   Vidur Wable         ₹99,351
+   Kanav Chowdhury     ₹99,305
+   Hiran Bali          ₹99,212
+
+3. Borrowers with Good Repayment History (Top 10 by Payments Made):
+   Name                Credit Score   Loan Type       Payments Made
+   ----------------------------------------------------------------
+   Mishti Lall         372            Home Loan       15
+   Tiya Sarna          701            Home Loan       15
+   Rohan Bahl          470            Personal Loan   15
+   Shaan Khare         725            Personal Loan   15
+   Tarini Kant         631            Personal Loan   15
+   Mannat Sankar       507            Auto Loan       15
+   Alia Sarin          769            Personal Loan   15
+   Hiran Trivedi       420            Auto Loan       14
+   Romil Shan          433            Auto Loan       14
+   Tushar Randhawa     380            Personal Loan   14
+
+4. Loan Type Analysis:
+   Loan Type           Borrower Count   Total Loan Amount   Avg Outstanding Balance
+   -------------------------------------------------------------------------------
+   Personal Loan       1,680            ₹92,352,752         ₹24,820.8
+   Home Loan           1,660            ₹92,317,769         ₹25,293.97
+   Auto Loan           1,660            ₹91,795,897         ₹25,024.11
